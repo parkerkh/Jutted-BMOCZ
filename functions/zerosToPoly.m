@@ -13,8 +13,8 @@
         - P >= 1 is the number of polynomials to generate
         - Coefficients are returned in descending order, i.e.,
           the leading coefficient is first
-        - The functions avoids using MATLAB's poly function and is
-          based on Appendix D in [1].
+        - The function avoids using MATLAB's poly function and is
+          based on Appendix D in [1]
 
     References:
         [1] A. Sahin, "Over-the-air majority vote computation with 
