@@ -16,9 +16,10 @@
         - Each element in epHat lies in the interval [0,1)
         - Coefficients need to be in descending order, i.e.,
           the leading coefficient is first
+        - The function assumes the RX polynomials are of order K
 
     References:
-        - P. Walk, P. Jung, B. Hassibi, and H. Jafarkhani, "MOCZ for blind 
+        [1] P. Walk, P. Jung, B. Hassibi, and H. Jafarkhani, "MOCZ for blind 
           short-packet communication: Practical aspects," IEEE Trans. 
           Wireless Commun., vol. 19, no. 10, pp. 6675-6692, 2020.
 %}

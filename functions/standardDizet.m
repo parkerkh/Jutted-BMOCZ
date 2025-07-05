@@ -18,6 +18,7 @@
         - Soft-decision output is pseudo-log-likelihood ratios
         - Coefficients need to be in descending order, i.e.,
           the leading coefficient is first
+        - The function assumes the RX polynomials are of order K
 %}
 
 function outArray = standardDizet(polyRX, K, constellationZeros, soft)
