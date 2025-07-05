@@ -1,6 +1,6 @@
 # Jutted-BMOCZ
 
-This repository accompanies our article "Jutted BMOCZ for Non-Coherent OFDM", which proposes a zero constellation for BMOCZ, called J-BMOCZ, and studies its application to non-coherent OFDM. The repository includes the following:
+This repository accompanies the article "Jutted BMOCZ for Non-Coherent OFDM", which proposes an asymmetric zero constellation for BMOCZ, called jutted BMOCZ (J-BMOCZ), and studies its application to non-coherent OFDM. The repository includes the following:
   1) sample MATLAB functions related to J-BMOCZ, Huffman BMOCZ, and zero stability;
   2) live scripts providing examples of concepts discussed in the paper;
   3) a software-defined radio (SDR) demo based on a BMOCZ-based OFDM waveform.
