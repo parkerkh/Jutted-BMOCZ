@@ -37,7 +37,8 @@ omega = linspace(-pi, pi, N);
 % Open zero pattern figure
 f1 = figure(1);
 grid on; box on; hold on; axis square;
-ax = gca; ax.GridLineStyle = ':'; ax.GridLineWidth = 1; ax.TickLabelInterpreter = 'latex';
+ax = gca; ax.GridLineStyle = ':'; ax.GridLineWidth = 1; 
+ax.TickLabelInterpreter = 'latex'; ax.FontSize = 10;
 
 plot(real(Router), imag(Router), 'k:', 'LineWidth', 1)
 plot(real(Rinner), imag(Rinner), 'k:', 'LineWidth', 1)
@@ -50,8 +51,9 @@ yticks(-1.5:0.5:1.5)
 
 % Open template figure
 f2 = figure(2);
-grid on; box on; hold on;
-ax = gca; ax.GridLineStyle = ':'; ax.GridLineWidth = 1; ax.TickLabelInterpreter = 'latex';
+grid on; box on; hold on; axis square;
+ax = gca; ax.GridLineStyle = ':'; ax.GridLineWidth = 1; 
+ax.TickLabelInterpreter = 'latex'; ax.FontSize = 10;
 
 xlabel('$\omega$', 'Interpreter', 'latex')
 ylabel('$T(\omega)$', 'Interpreter', 'latex')
@@ -65,6 +67,8 @@ xticklabels({'$-\pi$', '$-\pi/2$', '$0$', '$-\pi/2$', '$\pi$'});
 % Initialize scatterplot and lineplot
 s = scatter([], []);
 p = plot([], []);
+
+sz = 40;
 
 % Loop over rotation angles
 for i = 1:numel(phiSweep)
@@ -91,6 +95,6 @@ for i = 1:numel(phiSweep)
 
     % Export current figure to GIF
     exportgraphics(f1, 'zeroRotation.gif', 'Append', true);
-    exportgraphics(f2, 'tempalteShift.gif', 'Append', true);
+    exportgraphics(f2, 'templateShift.gif', 'Append', true);
 
 end
