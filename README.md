@@ -33,6 +33,6 @@ This repository accompanies the article "Jutted BMOCZ for Non-Coherent OFDM", wh
 
 [3] P. Huggins and A. Şahin, "On the optimal radius and subcarrier mapping for BMOCZ," in *Proc. IEEE Mil. Commun. Conf. (MILCOM)*, 2024, pp. 1-6.
 
-[4] P. Walk, P. Jung, and B. Hassibi, "MOCZ for blind short-packet communciation: Basic principles," in *IEEE Trans. Wireless Commun.*, vol. 18, no. 11, pp. 5080-5097, 2019.
+[4] P. Walk, P. Jung, and B. Hassibi, "MOCZ for blind short-packet communciation: Basic principles," *IEEE Trans. Wireless Commun.*, vol. 18, no. 11, pp. 5080-5097, 2019.
 
-[5] P. Walk, P. Jung, B. Hassibi, and H. Jafarkhani, "MOCZ for blind short-packet communication: Practical aspects," in *IEEE Trans. Wireless Commun.*, vol. 19, no. 10, pp. 6675-6692, 2020.
+[5] P. Walk, P. Jung, B. Hassibi, and H. Jafarkhani, "MOCZ for blind short-packet communication: Practical aspects," *IEEE Trans. Wireless Commun.*, vol. 19, no. 10, pp. 6675-6692, 2020.
