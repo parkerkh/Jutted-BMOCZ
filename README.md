@@ -14,7 +14,7 @@ This repository accompanies our article "Jutted BMOCZ for Non-Coherent OFDM", wh
         <sub>(a) Rotating zero pattern.</sub>
       </td>
       <td align="center">
-        <img src="images/tempalteShift.gif" width="400"/><br/>
+        <img src="images/templateShift.gif" width="400"/><br/>
         <sub>(b) Shifting template transform.</sub>
       </td>
     </tr>
