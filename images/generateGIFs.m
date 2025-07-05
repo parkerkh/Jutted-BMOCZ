@@ -62,7 +62,7 @@ xlim([-pi, pi])
 ylim([1.8, 8.2])
 xticks(-pi:pi/2:pi);
 yticks(2:1:8);
-xticklabels({'$-\pi$', '$-\pi/2$', '$0$', '$-\pi/2$', '$\pi$'});
+xticklabels({'$-\pi$', '$-\pi/2$', '$0$', '$\pi/2$', '$\pi$'});
 
 % Initialize scatterplot and lineplot
 s = scatter([], []);
