@@ -29,7 +29,7 @@
 
 function [messages, uHat] = acpcDecode(v, Htilde, goutn, HoutTilde, cosetLeaders)
     
-    % Declare needed variables
+    % Declare needed values
     if numel(goutn) == 31
         B = 16;
     else

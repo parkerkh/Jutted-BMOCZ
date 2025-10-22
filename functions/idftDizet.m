@@ -26,7 +26,7 @@
 
 function [messagesRX, epHat] = idftDizet(polyRX, Q, R)
 
-    % Declare needed variables
+    % Declare needed values
     K = height(polyRX) - 1; P = width(polyRX);
     yFlip = flipud(polyRX);
     Ntilde = Q*K;

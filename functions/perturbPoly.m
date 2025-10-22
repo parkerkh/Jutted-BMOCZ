@@ -16,7 +16,7 @@
 
 function perturbedRoots = perturbPoly(polyToPerturb, Nsim, EbN0)
     
-    % Declare needed variables
+    % Declare needed values
     K = height(polyToPerturb) - 1;
     EsN0 = EbN0 + 10*log10(K/(K+1));
     N0 = 10^(-EsN0 / 10);

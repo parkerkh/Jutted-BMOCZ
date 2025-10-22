@@ -24,11 +24,9 @@ function [polyMat, zerosMat] = jbmoczMessageToPoly(messages, R, zeta, E)
     
     % Declare needed values
     K = height(messages);
-    radiusVals = [[R*zeta, R*ones(1, K-1)].', 1./[R*zeta, R*ones(1, K-1)].'];
-    phaseVals = exp(1j*2*pi*(0:K-1)/K).';
 
     % Generate the zero constellation
-    constellationZeros = radiusVals .* phaseVals;
+    constellationZeros = generateAllZeros(K, R, zeta);
     
     % Map the messages to zeros
     zerosMat =  double(messages == 1) .* constellationZeros(:, 1) + double(messages == 0) .* constellationZeros(:, 2);

@@ -11,12 +11,14 @@
 
     Notes:
         - P >= 1 is the number of polynomials to correct
+        - Coefficients need to be in descending order, i.e., 
+          the leading coefficient is first
         - Each element in phiHat lies in the interval [0,2*pi)
 %}
 
 function [polyRXcorrected, phiHat] = correctPolysWithTemplate(polyRX, templateMat)
 
-    % Declare needed variables
+    % Declare needed values
     K = height(polyRX) - 1;
     N = height(templateMat);
 
