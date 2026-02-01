@@ -1,10 +1,10 @@
 # Jutted-BMOCZ
 
 This repository accompanies the article "Jutted BMOCZ for Non-Coherent OFDM", which proposes an asymmetric zero constellation for BMOCZ, called jutted BMOCZ (J-BMOCZ), and studies its application to non-coherent OFDM. The repository includes the following:
-  1) sample MATLAB functions for J-BMOCZ, Huffman BMOCZ, and zero stability;
-  2) affine cyclically permutable code implementations;
-  2) live scripts covering examples of concepts discussed in the paper;
-  3) a software-defined radio demo of non-coherent BMOCZ-based OFDM.
+  1) sample MATLAB functions for J-BMOCZ, Huffman BMOCZ, and zero stability analysis (see /functions);
+  2) (31,16) and (127,106) affine cyclically permutable code implementations (see /acpcArrays);
+  2) MATLAB live scripts covering topics in the references [1]-[4] (see /examples);
+  3) a software-defined radio demo of non-coherent OFDM-BMOCZ (see /sdrDemo).
 
 <div align="center">
 
@@ -28,9 +28,9 @@ This repository accompanies the article "Jutted BMOCZ for Non-Coherent OFDM", wh
 </div>
 
 ## References
-[1] P. Huggins and A. Şahin, "Jutted BMOCZ for non-coherent OFDM," under review.
+[1] P. Huggins and A. Şahin, "Jutted BMOCZ for non-coherent OFDM," *IEEE Trans. Wireless Commun.*, under review.
 
-[2] P. Huggins, A.J. Perre, and A. Şahin, "Fourier-domain CFO estimation using jutted binary modulation on conjugate-reciprocal zeros," in *Proc. IEEE Int. Symp. Pers., Indoor, Mob. Radio Commun. (PIMRC)*, 2025, pp. 1-6. Available: [https://arxiv.org/abs/2506.07256](https://arxiv.org/abs/2506.07256).
+[2] P. Huggins, A.J. Perre, and A. Şahin, "Fourier-domain CFO estimation using jutted binary modulation on conjugate-reciprocal zeros," in *Proc. IEEE Int. Symp. Pers., Indoor, Mob. Radio Commun. (PIMRC)*, 2025, pp. 1-6. Available: [https://ieeexplore.ieee.org/abstract/document/11275518](https://ieeexplore.ieee.org/abstract/document/11275518).
 
 [3] P. Huggins and A. Şahin, "On the optimal radius and subcarrier mapping for BMOCZ," in *Proc. IEEE Mil. Commun. Conf. (MILCOM)*, 2024, pp. 1-6. Available: [https://ieeexplore.ieee.org/abstract/document/10773785](https://ieeexplore.ieee.org/abstract/document/10773785).
 

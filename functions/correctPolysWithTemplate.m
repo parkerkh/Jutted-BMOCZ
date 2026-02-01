@@ -2,37 +2,44 @@
     Template-based estimation (and correction) of zero rotation.
 
     Inputs: 
-        - polyRX ((K+1) x P array of RX polynomial sequences)
+        - polyRX ((K+L) x P array of RX polynomial sequences)
         - templateMat (N x N template (Toeplitz) matrix) 
+        - K (number of zeros)
+        - L (CIR length)
 
     Outputs:
-        - polyRXcorrected ((K+1) x P array of corrected polynomial sequences)
+        - polyRXcorrected ((K+L) x P array of corrected polynomial sequences)
         - phiHat (1 x P array of estimated rotations (in radians))
 
     Notes:
         - P >= 1 is the number of polynomials to correct
+        - Each element in phiHat lies in the interval [0,2*pi)
         - Coefficients need to be in descending order, i.e., 
           the leading coefficient is first
-        - Each element in phiHat lies in the interval [0,2*pi)
+
+    References:
+        - P. Huggins, A.J. Perre, and A. Sahin, "Fourier-domain CFO estimation 
+          using jutted binary modulation on conjugate-reciprocal zeros," in 
+          Proc. IEEE PIMRC, 2025.
 %}
 
-function [polyRXcorrected, phiHat] = correctPolysWithTemplate(polyRX, templateMat)
+function [polyRXcorrected, phiHat] = correctPolysWithTemplate(polyRX, templateMat, K, L)
 
     % Declare needed values
-    K = height(polyRX) - 1;
-    N = height(templateMat);
+    N = K + L;
+    Nover = height(templateMat);
 
     % Calculate RX templates
-    rxTemplates = abs(fft(polyRX, N));
+    rxTemplates = abs(fft(polyRX, Nover));
 
     % Compute inner product with template matrix
     innerProds = rxTemplates.' * templateMat;
 
     % Estimate rotations
     [~, nMax] = max(innerProds, [], 2);
-    phiHat = 2*pi * (nMax-1) / N;
+    phiHat = 2*pi * (nMax-1) / Nover;
 
     % Correct rotations
-    polyRXcorrected = polyRX .* exp(1j* -phiHat .* (0:K)).';
+    polyRXcorrected = polyRX .* exp(1j* -phiHat .* (0:(N-1))).';
 
 end

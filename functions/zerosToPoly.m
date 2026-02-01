@@ -17,9 +17,9 @@
           based on Appendix D in [1]
 
     References:
-        [1] A. Sahin, "Over-the-air majority vote computation with 
-        modulation on conjugate-reciprocal zeros," IEEE Trans. Wireless 
-        Commun., vol. 23, no. 11, pp. 17714-17726, 2024.
+        - A. Sahin, "Over-the-air majority vote computation with 
+          modulation on conjugate-reciprocal zeros," IEEE Trans. Wireless 
+          Commun., vol. 23, no. 11, pp. 17714-17726, 2024.
 %}
 
 function polyMat = zerosToPoly(zerosMat, normalize, E)

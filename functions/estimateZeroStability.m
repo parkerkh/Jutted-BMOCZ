@@ -7,15 +7,20 @@
         - Nover (DFT size used in calculation)
 
     Outputs:
-        - Cmean (1 x P array of mean zero stability for each zero pattern)
         - Czeros (K x P array of estimated stability for each individual zero)
+        - Cmean (1 x P array of mean zero stability for each zero pattern)
 
     Notes:
-        - Ensure Nover >= K+1; a larger power of 2 is ideal, e.g., 1024
+        - Ensure Nover >= K+1; a large power of 2 is ideal (e.g., 1024)
         - P >= 1 is the number of zero patterns to analyze
+          (i.e., each column of zerosMat is a zero pattern)
+
+    References:
+        - P. Huggins and A. Sahin, "Jutted BMOCZ for non-coherent OFDM,"
+          IEEE Trans. Wireless Commun., under review.
 %}
 
-function [Cmean, Czeros] = estimateZeroStability(zerosMat, E, Nover)
+function [Czeros, Cmean] = estimateZeroStability(zerosMat, E, Nover)
 
     % Get size of inputted zero array
     [K, P] = size(zerosMat);

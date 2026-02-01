@@ -15,6 +15,11 @@
 
     Notes:
         - Ensure N >= K + 1
+
+    References:
+        - P. Huggins, A.J. Perre, and A. Sahin, "Fourier-domain CFO estimation 
+          using jutted binary modulation on conjugate-reciprocal zeros," in 
+          Proc. IEEE PIMRC, 2025.
 %}
 
 function [templateVector, templateMat] = getTemplate(constellationZeros, E, N)

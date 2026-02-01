@@ -1,10 +1,12 @@
 %{
-    Implementation of the oversampled DiZeT decoder based on the IDFT.
+    Implementation of the oversampled DiZeT decoder using the IDFT.
 
     Inputs:
-        - polyRX ((K+1) x P array of RX polynomial sequences)
+        - polyRX ((K+L) x P array of RX polynomial sequences)
+        - K (number of zeros)
         - Q (IDFT oversampling factor)
         - R (radius)
+        - L (CIR Length)
 
     Outputs:
         - messagesRX (K x P array of decoded messages)
@@ -16,24 +18,24 @@
         - Each element in epHat lies in the interval [0,1)
         - Coefficients need to be in descending order, i.e.,
           the leading coefficient is first
-        - The function assumes the RX polynomials are of order K
 
     References:
-        [1] P. Walk, P. Jung, B. Hassibi, and H. Jafarkhani, "MOCZ for blind 
+        - P. Walk, P. Jung, B. Hassibi, and H. Jafarkhani, "MOCZ for blind 
           short-packet communication: Practical aspects," IEEE Trans. 
           Wireless Commun., vol. 19, no. 10, pp. 6675-6692, 2020.
 %}
 
-function [messagesRX, epHat] = idftDizet(polyRX, Q, R)
+function [messagesRX, epHat] = idftDizet(polyRX, K, Q, R, L)
 
     % Declare needed values
-    K = height(polyRX) - 1; P = width(polyRX);
+    P = width(polyRX); 
+    N = K + L;
     yFlip = flipud(polyRX);
     Ntilde = Q*K;
     
     % Scaling vectors
-    Rk = R .^ (0:K).';
-    Rm1k = (1/R) .^ (0:K).';
+    Rk = R .^ (0:(N-1)).';
+    Rm1k = (1/R) .^ (0:(N-1)).';
     
     % Take IDFT
     YalphaR = Ntilde * ifft((yFlip .* Rk), Ntilde);
@@ -41,7 +43,7 @@ function [messagesRX, epHat] = idftDizet(polyRX, Q, R)
    
     % Reshape for summing
     Y1 = reshape(abs(YalphaR), Q, K, P);
-    Y2 = R^K * reshape(abs(YalphaRm1), Q, K, P);
+    Y2 = R^(N-1) * reshape(abs(YalphaRm1), Q, K, P);
 
     % Perform summing
     minVals = min(Y1, Y2);
@@ -60,6 +62,6 @@ function [messagesRX, epHat] = idftDizet(polyRX, Q, R)
     indDecode = sub2ind(size(YalphaR), rowIndices, colIndices);
     
     % Apply decoding rule
-    messagesRX = double(abs(YalphaR(indDecode)) < R^K * abs(YalphaRm1(indDecode)));
+    messagesRX = double(abs(YalphaR(indDecode)) < R^(N-1) * abs(YalphaRm1(indDecode)));
 
 end

@@ -18,8 +18,8 @@ constellationZeros = generateAllZeros(K, R, zeta);
 % Declare 16-bit binary message
 message = [1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1].';
 
-% Map message to polynomial
-polyTX = jbmoczMessageToPoly(message, R, zeta, K+1);
+% Map message to polynomial zeros
+[~, zerosTX] = jbmoczMessageToPoly(message, R, zeta, K+1);
 
 % Declare variables for plotting
 theta = linspace(0, 2*pi, 1000);
@@ -78,8 +78,8 @@ for i = 1:numel(phiSweep)
     delete(p);
 
     % Rotate zeros
-    polyRX = polyTX .* exp(1j*phiSweep(i)*(0:K)).';
-    zerosRX = roots(polyRX);
+    zerosRX = zerosTX * exp(1j*phiSweep(i));
+    polyRX = zerosToPoly(zerosRX, 1, K+1);
 
     % Calculate template 
     templateRX = abs(fft(polyRX, N));
