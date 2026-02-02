@@ -16,7 +16,7 @@
 
     Notes:
         - P >= 1 is the number of polynomials to decode
-        - Soft-decision output is pseudo-log-likelihood ratios
+        - Soft output is pseudo-log-likelihood ratio for each tested zero
         - Coefficients need to be in descending order, i.e.,
           the leading coefficient is first
 
