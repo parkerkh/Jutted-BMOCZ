@@ -9,7 +9,7 @@ A brief description of each function is given below. Use of the functions is ill
 - `correctPolysWithTemplate()` correct zero rotation for J-BMOCZ using template cross-correlation 
 - `estimateZeroStability()` measure the zero stability of a polynomial given its roots
 - `generateAllZeros()` generate all zeros in the J-BMOCZ zero constellation 
-- `getTemplate()` get J-BMOCZ template transform transform in sampled form 
+- `getTemplate()` get J-BMOCZ template transform in sampled form 
 - `idftDizet()` decode polynomials for BMOCZ using the oversampled (IDFT-based) DiZeT decoder 
 - `jbmoczMessageToPoly()` map messages to zero patterns and polynomials for J-BMOCZ
 - `loadACPCarrays()` load the arrays needed for ACPC encoding and decoding
