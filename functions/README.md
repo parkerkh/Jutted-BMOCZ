@@ -5,7 +5,7 @@ This folder contains a selection of MATLAB functions for J-BMOCZ, ACPC encoding 
 A brief description of each function is given below. Use of the functions is illustrated in the `/examples` folder of this repository.
 
 - `acpcDecode()` decode codewords for a ($K,B$)-ACPC 
-- `acpcEecode()` encode messages using a ($K,B$)-ACPC
+- `acpcEncode()` encode messages using a ($K,B$)-ACPC
 - `correctPolysWithTemplate()` correct zero rotation for J-BMOCZ using template cross-correlation 
 - `estimateZeroStability()` measure the zero stability of a polynomial given its roots
 - `generateAllZeros()` generate all zeros in the J-BMOCZ zero constellation 
