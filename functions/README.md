@@ -2,7 +2,7 @@
 
 This folder contains a selection of MATLAB functions for J-BMOCZ, ACPC encoding and decoding, zero stability analysis, and more. 
 
-A brief description of each function is given below. Use of the functions is illustrated in the /examples folder of this repository.
+A brief description of each function is given below. Use of the functions is illustrated in the `/examples` folder of this repository.
 
 - `acpcDecode()` decode codewords for a ($K,B$)-ACPC 
 - `acpcEecode()` encode messages using a ($K,B$)-ACPC
