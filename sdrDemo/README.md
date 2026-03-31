@@ -1,6 +1,6 @@
 ## Software-defined Radio Demo
 
-This folder contains a MATLAB live script that walks through the SDR implementation of non-coherent OFDM-BMOCZ presented in the reference "Jutted BMOCZ for Non-Coherent OFDM". 
+This folder contains a MATLAB live script walking through the SDR implementation of non-coherent OFDM-BMOCZ presented in "Jutted BMOCZ for Non-Coherent OFDM" [1]. 
 
 The demo uses ADALM-PLUTO SDRs and MATLAB's "Communications Toolbox Support Package for Analog Devices ADALM-Pluto Radio". However, the demo can be edited for use with other SDRs by simply changing the relevant lines in `mainSDRdemo.mlx`.
 
