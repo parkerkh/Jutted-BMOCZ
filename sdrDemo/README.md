@@ -6,5 +6,5 @@ The demo uses ADALM-PLUTO SDRs and MATLAB's "Communications Toolbox Support Pack
 
 <p align="center">
   <img src="../images/demoImage.png" width="600"><br>
-  <b>Figure 1.</b> Example demo results in "Jutted BMOCZ for Non-Coherent OFDM".
+  <b>Figure 1.</b> Example demo results in "Jutted BMOCZ for Non-Coherent OFDM" [1].
 </p>
