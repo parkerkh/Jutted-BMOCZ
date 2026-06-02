@@ -17,9 +17,8 @@
         - Ensure N >= K + 1
 
     References:
-        - P. Huggins, A.J. Perre, and A. Sahin, "Fourier-domain CFO estimation 
-          using jutted binary modulation on conjugate-reciprocal zeros," in 
-          Proc. IEEE PIMRC, 2025.
+        - P. Huggins and A. Sahin, "Jutted BMOCZ for non-coherent OFDM,"
+          IEEE Trans. Wireless Commun., vol. 24, pp. 17864-17878, 2026.
 %}
 
 function [templateVector, templateMat] = getTemplate(constellationZeros, E, N)

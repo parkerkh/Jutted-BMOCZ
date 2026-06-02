@@ -25,7 +25,7 @@
           short-packet communication: Basic principles," IEEE Trans. 
           Wireless Commun., vol. 18, no. 11, pp. 5080-5097, 2019.
         - P. Huggins and A. Sahin, "Jutted BMOCZ for non-coherent OFDM,"
-          IEEE Trans. Wireless Commun., under review.
+          IEEE Trans. Wireless Commun., vol. 24, pp. 17864-17878, 2026.
 %}
 
 function outArray = standardDizet(polyRX, K, L, constellationZeros, soft)
