@@ -32,7 +32,7 @@ The repository includes the following:
 ## References
 [1] P. Huggins and A. Şahin, "Jutted BMOCZ for non-coherent OFDM," *IEEE Trans. Wireless Commun.*, vol. 25, pp. 17864-17878, 2026. Available: [https://ieeexplore.ieee.org/abstract/document/11526940](https://ieeexplore.ieee.org/abstract/document/11526940).
 
-[2] P. Huggins, A.J. Perre, and A. Şahin, "Fourier-domain CFO estimation using jutted binary modulation on conjugate-reciprocal zeros," in *Proc. IEEE Int. Symp. Pers., Indoor, Mob. Radio Commun. (PIMRC)*, 2025, pp. 1-6. Available: [https://ieeexplore.ieee.org/abstract/document/11275518](https://ieeexplore.ieee.org/abstract/document/11275518).
+[2] P. Huggins, A. J. Perre, and A. Şahin, "Fourier-domain CFO estimation using jutted binary modulation on conjugate-reciprocal zeros," in *Proc. IEEE Int. Symp. Pers., Indoor, Mob. Radio Commun. (PIMRC)*, 2025, pp. 1-6. Available: [https://ieeexplore.ieee.org/abstract/document/11275518](https://ieeexplore.ieee.org/abstract/document/11275518).
 
 [3] P. Huggins and A. Şahin, "On the optimal radius and subcarrier mapping for BMOCZ," in *Proc. IEEE Mil. Commun. Conf. (MILCOM)*, 2024, pp. 1-6. Available: [https://ieeexplore.ieee.org/abstract/document/10773785](https://ieeexplore.ieee.org/abstract/document/10773785).
 
